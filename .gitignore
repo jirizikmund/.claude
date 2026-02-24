@@ -1,0 +1,23 @@
+# Ignore everything by default
+*
+
+# Allow gitignore itself
+!.gitignore
+
+# Core config
+!CLAUDE.md
+!settings.json
+
+# Local project settings (permissions)
+!.claude/
+!.claude/settings.local.json
+
+# Custom agents
+!agents/
+!agents/*.md
+
+# Plugin configuration (not cache/repos)
+!plugins/
+!plugins/blocklist.json
+!plugins/installed_plugins.json
+!plugins/known_marketplaces.json
