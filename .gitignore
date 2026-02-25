@@ -21,3 +21,15 @@
 !plugins/blocklist.json
 !plugins/installed_plugins.json
 !plugins/known_marketplaces.json
+
+# Plans
+!plans/
+!plans/*.md
+
+# Project configs and memory (not session logs)
+!projects/
+!projects/*/
+!projects/*/CLAUDE.md
+!projects/*/memory/
+!projects/*/memory/**
+!projects/*/memory/**/*.md
