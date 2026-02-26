@@ -1,1 +1,33 @@
-{}
+{
+  "enabledPlugins": {
+    "code-review@claude-plugins-official": true
+  },
+  "permissions": {
+    "allow": [
+      "mcp__appium-mcp__*"
+    ]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "mcp__appium-mcp__.*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "pgrep -f 'appium.*--port' > /dev/null || (appium --port 4723 > /tmp/appium.log 2>&1 & sleep 3)"
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "pkill -f 'appium.*--port' || true"
+          }
+        ]
+      }
+    ]
+  }
+}
