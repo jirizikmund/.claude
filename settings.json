@@ -1,10 +1,16 @@
 {
-  "enabledPlugins": {
-    "code-review@claude-plugins-official": true
-  },
   "permissions": {
     "allow": [
-      "mcp__appium-mcp__*"
+      "mcp__appium-mcp__*",
+      "Bash(curl*localhost:4723*)",
+      "Bash(xcrun simctl*)",
+      "Bash(adb *)",
+      "Bash(pgrep*)",
+      "Bash(pkill*appium*)",
+      "Bash(appium*)",
+      "Bash(mkdir -p*app-screens*)",
+      "Bash(mv */app-screens/*)",
+      "Bash(sleep*)"
     ]
   },
   "hooks": {
@@ -29,5 +35,9 @@
         ]
       }
     ]
+  },
+  "enabledPlugins": {
+    "code-review@claude-plugins-official": true,
+    "playwright@claude-plugins-official": true
   }
 }

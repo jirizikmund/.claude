@@ -18,10 +18,14 @@ Before any inspection, ensure a working Appium session:
    - Prefer test/dev variant if available
 
 3. **Load test credentials:**
-   - Read `.claude/.env.local` file in the project root
-   - Look for login credentials (e.g. `APP_TEST_USERNAME`, `APP_TEST_PASSWORD`, or similar)
-   - Use these to log in if the app shows a login screen
-   - If credentials are empty or missing, ask the orchestrator
+   - ALWAYS read `.claude/.env.local` file in the project root FIRST
+   - Look for `APP_TEST_USERNAME` and `APP_TEST_PASSWORD`
+   - If values are present and non-empty, use them to log in
+   - If values are EMPTY (e.g. `APP_TEST_USERNAME=` with no value) or keys are missing:
+     1. Ask the orchestrator for the username and password
+     2. After receiving them, save them to `.claude/.env.local` (append or update the keys)
+     3. Then use them to log in
+   - Use these to log in if the app shows a login/unlock screen
 
 4. **Create Appium session:**
    - Use `select_platform` → `select_device` → `setup_wda` (iOS only) → `install_wda` (iOS only) → `create_session`
@@ -127,7 +131,26 @@ The agent maintains a knowledge base of app screens in `.claude/app-screens/` (p
 
 ## Important Rules
 
-- Save all screenshots to `.claude/app-screens/screenshots/` in the project root. Create the directory if needed: `mkdir -p .claude/app-screens/screenshots/`. If Appium saves screenshots elsewhere (e.g. /tmp), move them: `mv /tmp/screenshot.png .claude/app-screens/screenshots/descriptive-name.png`. Use descriptive filenames: `login-screen.png`, `dashboard-after-scroll.png`
+### CRITICAL: Use MCP tools, NOT curl
+- NEVER use curl/wget to call the Appium REST API directly
+- ALWAYS use the appium-mcp MCP tools for ALL interactions with the device:
+  - `select_platform`, `select_device`, `setup_wda`, `install_wda`, `create_session` — for setup
+  - `appium_screenshot` — for taking screenshots
+  - `appium_find_element`, `appium_find_elements` — for finding elements
+  - `appium_click`, `appium_tap` — for tapping
+  - `appium_send_keys`, `appium_type` — for typing text
+  - `appium_swipe`, `appium_scroll` — for scrolling
+  - `appium_get_page_source` — for getting element tree
+  - `delete_session` — for cleanup
+- The only Bash usage allowed is for file operations (mkdir, mv, reading .env files)
+
+### Screenshots
+- Save all screenshots to `.claude/app-screens/screenshots/` in the project root
+- Create the directory if needed: `mkdir -p .claude/app-screens/screenshots/`
+- If appium-mcp saves screenshots elsewhere (e.g. /tmp), move them to the project folder
+- Use descriptive filenames: `login-screen.png`, `dashboard-after-scroll.png`
+
+### General
 - Always take a screenshot FIRST before describing anything
 - Wait for loading states to complete (look for activity indicators, spinners)
 - If an action fails, retry once, then report the failure
