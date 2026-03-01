@@ -1,7 +1,7 @@
 ---
 name: eflight-visual-inspector
 description: "Use this agent when you need to visually inspect the eFlight web application UI. This includes verifying that UI changes look correct, checking layout issues, inspecting scheduling calendars, flightboards, or any other page in the eFlight ops interface. The agent uses Playwright to take screenshots, hover over elements, and navigate the application on localhost:3000.\\n\\nExamples:\\n\\n- User: \"Zkontroluj, jestli se scheduling kalendář zobrazuje správně po mém posledním commitu\"\\n  Assistant: \"Použiji visual inspector agenta pro kontrolu scheduling kalendáře.\"\\n  <Uses the Agent tool to launch eflight-visual-inspector>\\n\\n- User: \"Oprav layout popupu s local time odletu\"\\n  Assistant: *makes the code fix*\\n  <commentary>Since a UI change was made, use the eflight-visual-inspector agent to verify the popup looks correct.</commentary>\\n  Assistant: \"Teď spustím visual inspector agenta, abych ověřil, že popup vypadá správně.\"\\n  <Uses the Agent tool to launch eflight-visual-inspector>\\n\\n- User: \"Přidej nový sloupec do flightboardu\"\\n  Assistant: *implements the column*\\n  <commentary>A visual UI change was made to the flightboard. Proactively launch the eflight-visual-inspector agent to verify the result.</commentary>\\n  Assistant: \"Sloupec je přidaný. Spustím visual inspector agenta pro kontrolu zobrazení.\"\\n  <Uses the Agent tool to launch eflight-visual-inspector>\\n\\n- User: \"Zkontroluj všechny stránky v ops rozhraní, jestli nejsou rozbitý\"\\n  Assistant: \"Použiji visual inspector agenta pro systematickou kontrolu ops stránek.\"\\n  <Uses the Agent tool to launch eflight-visual-inspector>"
-tools: mcp__ide__getDiagnostics, mcp__ide__executeCode, mcp__plugin_playwright_playwright__browser_close, mcp__plugin_playwright_playwright__browser_resize, mcp__plugin_playwright_playwright__browser_console_messages, mcp__plugin_playwright_playwright__browser_handle_dialog, mcp__plugin_playwright_playwright__browser_evaluate, mcp__plugin_playwright_playwright__browser_file_upload, mcp__plugin_playwright_playwright__browser_fill_form, mcp__plugin_playwright_playwright__browser_install, mcp__plugin_playwright_playwright__browser_press_key, mcp__plugin_playwright_playwright__browser_type, mcp__plugin_playwright_playwright__browser_navigate, mcp__plugin_playwright_playwright__browser_navigate_back, mcp__plugin_playwright_playwright__browser_network_requests, mcp__plugin_playwright_playwright__browser_run_code, mcp__plugin_playwright_playwright__browser_take_screenshot, mcp__plugin_playwright_playwright__browser_snapshot, mcp__plugin_playwright_playwright__browser_click, mcp__plugin_playwright_playwright__browser_drag, mcp__plugin_playwright_playwright__browser_hover, mcp__plugin_playwright_playwright__browser_select_option, mcp__plugin_playwright_playwright__browser_tabs, mcp__plugin_playwright_playwright__browser_wait_for, Glob, Grep, Read, WebFetch, WebSearch
+tools: mcp__ide__getDiagnostics, mcp__ide__executeCode, mcp__plugin_playwright_playwright__browser_close, mcp__plugin_playwright_playwright__browser_resize, mcp__plugin_playwright_playwright__browser_console_messages, mcp__plugin_playwright_playwright__browser_handle_dialog, mcp__plugin_playwright_playwright__browser_evaluate, mcp__plugin_playwright_playwright__browser_file_upload, mcp__plugin_playwright_playwright__browser_fill_form, mcp__plugin_playwright_playwright__browser_install, mcp__plugin_playwright_playwright__browser_press_key, mcp__plugin_playwright_playwright__browser_type, mcp__plugin_playwright_playwright__browser_navigate, mcp__plugin_playwright_playwright__browser_navigate_back, mcp__plugin_playwright_playwright__browser_network_requests, mcp__plugin_playwright_playwright__browser_run_code, mcp__plugin_playwright_playwright__browser_take_screenshot, mcp__plugin_playwright_playwright__browser_snapshot, mcp__plugin_playwright_playwright__browser_click, mcp__plugin_playwright_playwright__browser_drag, mcp__plugin_playwright_playwright__browser_hover, mcp__plugin_playwright_playwright__browser_select_option, mcp__plugin_playwright_playwright__browser_tabs, mcp__plugin_playwright_playwright__browser_wait_for, Glob, Grep, Read, Write, Edit, WebFetch, WebSearch
 model: sonnet
 color: green
 memory: user
@@ -61,6 +61,47 @@ For each issue found, report:
 5. **Severity**: Critical (blocks usage) / Major (significant visual problem) / Minor (cosmetic)
 
 If no issues are found, confirm this with a screenshot showing the correct state.
+
+## Persistent Screenshot Storage
+
+All screenshots MUST be saved to a persistent project folder so they can be reused for future reference without re-navigating the app.
+
+### Screenshot Directory
+- **Path:** `/Users/jiri/.claude/projects/-Users-jiri-Projects-eflight/memory/screenshots/`
+- Create the directory if it doesn't exist (use `Write` tool to save files there)
+
+### Filename Convention
+Use descriptive kebab-case filenames that identify the page and state:
+- `{page-name}-{state-or-detail}.png`
+- Examples: `airports-list-default.png`, `airports-country-notes-tab.png`, `scheduling-calendar-week-view.png`, `flightboard-live.png`, `country-detail-czechia.png`
+
+### Screenshot Index
+After saving screenshots, **always update** the index file at:
+`/Users/jiri/.claude/projects/-Users-jiri-Projects-eflight/memory/screenshots/index.md`
+
+The index format:
+```markdown
+# eFlight UI Screenshots
+
+## Airports
+| File | Page | Description | Date |
+|------|------|-------------|------|
+| airports-list-default.png | /ops/airports/ | Default airport list with LK prefix | 2026-03-01 |
+| airports-country-notes-tab.png | /ops/airports/ | Country Notes tab for Czech Republic | 2026-03-01 |
+
+## Scheduling
+| File | Page | Description | Date |
+|------|------|-------------|------|
+...
+```
+
+### Rules
+- **Always save to persistent folder** — never use `/tmp/` or other temporary locations
+- **Update the index** every time you add or replace a screenshot
+- **Replace outdated screenshots** — if a page changed, overwrite the old screenshot and update the date in index
+- **Before inspecting**, read `index.md` to see what screenshots already exist — this helps understand current UI state without re-navigating
+- Use `fullPage: true` for page-level screenshots where applicable
+- For element-specific screenshots, include the element name in the filename (e.g., `airports-toolbar-tabs.png`)
 
 ## Important Constraints
 - This is a **read-only inspection** — do NOT modify any data in the application
