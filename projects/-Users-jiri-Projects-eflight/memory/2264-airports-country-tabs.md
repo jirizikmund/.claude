@@ -18,23 +18,30 @@ Stránka `/ops/airports/` zobrazuje seznam letišť vybrané země s mapou. Nast
 
 **Soubor:** `src/Admin/screens/Airports/AirportListScreen/AirportListScreen.tsx`
 
-- Přidán state `activeTab: 'airports' | 'country-notes'` (default `'airports'`)
-- Přidán state `countryId: string | null` — UUID země načtené z DB
-- `useEffect` při změně ICAO prefixu volá `getCachedCountry(icaoPrefix)` a nastaví `countryId`
-- Bootstrap `nav nav-pills` záložky vedle dropdownu v header baru
-- Záložky se zobrazí jen pokud existuje vybraná země v `icaoToCountry` mapě
-- Při aktivní záložce "Airports": stávající `AirportFilteredScreen`
-- Při aktivní záložce "Country Notes": `CountryDetail` s `id={countryId}` a `showBackLink={false}`
-- Tlačítko "Show Closed" jen při aktivní záložce "Airports"
-- Při změně země se resetuje záložka na "Airports"
+- URL-based routing: `/ops/airports/` (default) a `/ops/airports/country-notes`
+- `useMatch` pro detekci aktivní záložky místo state
+- `countryId` state — UUID země načtené z DB přes `getCachedCountry(icaoPrefix)`
+- Bootstrap `nav nav-pills` záložky jako `LinkA` vedle dropdownu
+- Nested `<Routes>` pro obsah záložek
+- Přepnutí země zachová aktivní záložku (díky URL)
 
-### 3. Layout záložek
+### 3. Layout záložek ✅
 
 ```
 [Search box] [Country dropdown] [Airports | Country Notes] [Show Closed*]
 ```
 *Show Closed jen pokud je aktivní tab Airports
 
+### 4. Přidat readonly country info do hlavičky stránky Airports
+
+Zobrazit klíčové boolean flagy země přímo v toolbaru/hlavičce:
+- Genedec required
+- Is EU
+- Permit EU
+- Permit 3rd Country
+
+Zobrazují se readonly (ne editovatelné) — slouží jako rychlý přehled o zemi.
+
 ## Zbývá
 
-- [ ] Vizuální ověření přes Playwright
+- [ ] Implementace readonly country info v hlavičce (#4)
