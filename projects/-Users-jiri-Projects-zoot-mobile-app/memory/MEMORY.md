@@ -33,6 +33,11 @@ Flavor plisty (`Info.zoot.plist`, `info.bibloo.plist`) se neudržují v synchron
 
 Commit message formát: `v21.15.3 (597)` (verze + build number v závorce)
 
+## MOB-810: 16KB page size
+- Quick-fix (AGP 8.5.2, Gradle 8.7, compileSdk 35) nestačí — RN 0.74 .so mají 4KB alignment
+- Jediné řešení: upgrade RN na 0.76+
+- Detailní plán: viz `MOB-810-16kb-page-size.md`
+
 ## Debugging poznámky
 - `configureFirebase()` v App.tsx nemá error handling — chyby se tiše polykají
 - FCM token se ukládá do Redux storu přes `AuthData.setFcmToken()`
