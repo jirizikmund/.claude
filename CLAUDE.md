@@ -20,13 +20,6 @@
 - Pouze nabídnout uživateli správný příkaz, který si spustí sám
 - Vždy nejdřív nabídnout `--dry-run` pro kontrolu, pak teprve skutečnou publikaci
 
-## Code Review
-
-- Pro code review používat plugin `/code-review`
-- Stačí zadat číslo tasku – najít odpovídající PR a spustit review
-- Plugin automaticky běží izolovaně přes subagenty
-- Výsledek se postne jako komentář na PR na GitHubu
-
 ## Soubory plánů v memory
 
 - Název souboru vždy začíná číslem tasku: `XXXX-popis.md`
