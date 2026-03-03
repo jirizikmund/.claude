@@ -17,9 +17,11 @@
 ## Struktura aplikace
 
 - [Popis stránek a UI](app-pages.md)
+- [Checklist rezervace — znalosti](checklist-knowledge.md)
 
 ## Aktivní plány
 
+- [Úpravy checklistu rezervace (#1057)](1057-checklist-modifications.md)
 - [Airports/Country Notes záložky (#2264)](2264-airports-country-tabs.md)
 - [Fix flightboard live update zaseknutí (#2559)](2559-flightboard-live-update-fix.md)
 - [Fix chybějící local time odletu v popupu (#2558)](2558-scheduling-popup-local-time-fix.md)
