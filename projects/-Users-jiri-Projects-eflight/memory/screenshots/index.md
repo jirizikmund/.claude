@@ -95,6 +95,17 @@ Persistentní screenshoty UI aplikace eFlight. Používají se pro vizuální re
 | File | Page | Description | Date |
 |------|------|-------------|------|
 
+## Checklist Tester
+| File | Page | Description | Date |
+|------|------|-------------|------|
+| checklist-tester-initial.png | /ops/checklist-tester | Počáteční stav Checklist Tester — prázdný, čeká na Reservation ID | 2026-03-19 |
+| checklist-tester-gu9us-loaded.png | /ops/checklist-tester | GU9US načteno — LKPR DEPARTURE + LKKV ARRIVAL, levý panel s ovládacími prvky | 2026-03-19 |
+| checklist-tester-initial-state.png | /ops/checklist-tester | GU9US — výchozí stav po načtení rezervace (nový session) | 2026-03-19 |
+| checklist-tester-time-override.png | /ops/checklist-tester | Time override: Departure time nastaven na 19.03.2026 21:00 — červeně zvýrazněno, "↺ Reset all" tlačítko viditelné | 2026-03-19 |
+| checklist-tester-handling-override.png | /ops/checklist-tester | Handling override: handling=no v LKPR — handling label červeně, ARPT tab přibyl do LKPR Departure checklistu | 2026-03-19 |
+| checklist-tester-reset-all.png | /ops/checklist-tester | Po "Reset all" — vše vráceno na původní reálné hodnoty, žádná zvýraznění | 2026-03-19 |
+| checklist-tester-wx-detail-open.png | /ops/checklist-tester | WX tab v LKPR Departure otevřen — TAF data, RVR/MDH, červený error "FPL Not Assigned", Confirm disabled | 2026-03-19 |
+
 ## Other
 | File | Page | Description | Date |
 |------|------|-------------|------|

@@ -1,7 +1,6 @@
 {
-  "statusLine": {
-    "type": "command",
-    "command": "bash /Users/jiri/.claude/statusline-command.sh"
+  "env": {
+    "TAVILY_API_KEY": "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"
   },
   "permissions": {
     "allow": [
@@ -40,8 +39,16 @@
       }
     ]
   },
+  "statusLine": {
+    "type": "command",
+    "command": "bash /Users/jiri/.claude/statusline-command.sh"
+  },
   "enabledPlugins": {
     "code-review@claude-plugins-official": true,
-    "playwright@claude-plugins-official": true
-  }
+    "playwright@claude-plugins-official": true,
+    "frontend-design@claude-plugins-official": true
+  },
+  "effortLevel": "high",
+  "voiceEnabled": false,
+  "skipDangerousModePermissionPrompt": true
 }
