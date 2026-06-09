@@ -1,0 +1,2 @@
+- [No third-party advertising in Syntex](project_no_advertising.md) — verified against deps; Age Rating Advertising=No is correct; Apple scanner false-positived on 2026-04-14, reply + App Review Notes prepared.
+- [Never push without asking](feedback_never_push.md) — commit locally when asked, but never `git push`; the user pushes.

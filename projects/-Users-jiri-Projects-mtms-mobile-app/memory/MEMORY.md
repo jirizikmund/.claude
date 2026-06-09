@@ -1,1 +1,7 @@
-# Memory
+- [Redesign mFTL — série tasků](project_redesign_series.md) — TMS-522/536/538/539/556+, nové komponenty/tokeny, staré se postupně nahrazují
+- [Figma soubory pro mFTL design](reference_figma.md) — mFTL-app `UfAztynGtHHU9AdWfLUb70` (aktivní), mFTL-DEV `jVCGflP7L9HWx41BVyguQo` (foundation)
+- [SPACING/RADIUS coef = Figma token název](feedback_spacing_radius_convention.md) — Figma `spacing-N` → `SPACING(N)`, raw px = flag uživateli
+- [Barvy — sémantické přes useColors, žádné raw hex](feedback_color_convention.md) — pouze `Colors.*` z useColors, Figma JSON exporty jsou source of truth
+- [Ikony — barvy podle role v UI](feedback_icon_color_patterns.md) — `Colors.icon` není univerzál; panel avatar = `text.support`, ListItem leftIcon = `text.primary`, chevron = `text.support`
+- [@expo/ui SwiftMenu hit area](feedback_expo_ui_menu_hitarea.md) — string `label` má hit area jen na textu; pro rozšíření předej custom JSX label s frame+contentShape
+- [@expo/ui DropdownMenu na Androidu](feedback_expo_ui_dropdown_menu_android.md) — wrap v `Host matchContents` + `size(W,H)` modifier; v slotech Compose `Text`, ne RN Text

@@ -1,0 +1,28 @@
+{
+  "mcpServers": {
+    "clickup": {
+      "command": "bash",
+      "args": [
+        "-c",
+        "export $(cat /Users/jiri/Projects/mtms-mobile-app/.claude/.env.local | xargs) && npx -y @d4works/mcp-clickup@latest"
+      ],
+      "env": {
+        "CLICKUP_TEAM_ID": "90151222591",
+        "CLICKUP_TASK_PREFIX": "TMS"
+      }
+    },
+    "clockify": {
+      "command": "bash",
+      "args": [
+        "-c",
+        "export $(cat /Users/jiri/Projects/mtms-mobile-app/.claude/.env.local | xargs) && npx -y @d4works/mcp-clockify@latest"
+      ],
+      "env": {
+        "CLOCKIFY_WORKSPACE_ID": "618b9a74814c3e25bd64aec3",
+        "CLOCKIFY_PROJECT_ID": "66c452f7e03e190db06ad8df",
+        "CLOCKIFY_TASK_PREFIX": "TMS",
+        "CLOCKIFY_LANGUAGE": "cs"
+      }
+    }
+  }
+}

@@ -91,9 +91,34 @@ Persistentní screenshoty UI aplikace eFlight. Používají se pro vizuální re
 | File | Page | Description | Date |
 |------|------|-------------|------|
 
-## Countries
+## Countries / Country Notes
 | File | Page | Description | Date |
 |------|------|-------------|------|
+| country-notes-full-page.png | /ops/airports/country-notes | Celá stránka Country Notes — Czech Republic, fullPage screenshot | 2026-03-26 |
+| country-notes-top-section.png | /ops/airports/country-notes | Horní část — toolbar, badges (EU/Permit EU/Permit 3rd Country/Genedec), ICAOS sekce, Name/ISO2/ISO3, Note editor | 2026-03-26 |
+| country-notes-middle-section.png | /ops/airports/country-notes | Střední část — Note editor + Permit fields (Days/Hours/dropdown) + checkboxy | 2026-03-26 |
+| country-notes-bottom-section.png | /ops/airports/country-notes | Spodní část — Permit fields, checkboxy (Gendec/Is EU/Permit EU/Permit 3rd Country), Save button | 2026-03-26 |
+| country-notes-redesign-full.png | /ops/airports/country-notes | REDESIGN — celá stránka (fullPage) — 3 karty: General / Country Note / Permit & Compliance | 2026-03-26 |
+| country-notes-redesign-top.png | /ops/airports/country-notes | REDESIGN — horní část: General karta s ICAOS, Name, ISO2/ISO3 side-by-side | 2026-03-26 |
+| country-notes-redesign-middle.png | /ops/airports/country-notes | REDESIGN — střední část: Country Note karta + top Permit & Compliance karty | 2026-03-26 |
+| country-notes-redesign-bottom.png | /ops/airports/country-notes | REDESIGN — spodní část: Permit fields, checkboxy v řadě, Save button mimo karty | 2026-03-26 |
+| country-notes-redesign-icaos-detail.png | /ops/airports/country-notes | REDESIGN — detail ICAOS sekce: Bootstrap delete buttony (bi bi-x-lg ikona) + Add button | 2026-03-26 |
+| country-notes-redesign-checkboxes-viewport.png | /ops/airports/country-notes | REDESIGN — checkboxy + Permit fields + Save button — kompletní dolní část | 2026-03-26 |
+| country-notes-v2-full-page.png | /ops/airports/country-notes | v2 inspekce — celá stránka (fullPage): General karta, Country Note, Permit & Compliance, Save tlačítko | 2026-03-26 |
+| country-notes-v2-top-section.png | /ops/airports/country-notes | v2 inspekce — horní část: toolbar, badges, General karta s ICAOS + Name/ISO2/ISO3, Country Note editor začátek | 2026-03-26 |
+| country-notes-v2-bottom-section.png | /ops/airports/country-notes | v2 inspekce — spodní část: Country Note editor + Permit & Compliance + checkboxy + Save | 2026-03-26 |
+| country-notes-v2-icaos-detail.png | /ops/airports/country-notes | v2 — detail ICAOS sekce: inline vstupy LK/LKPL/LKKV + SVG X tlačítka + Add button | 2026-03-26 |
+| country-notes-v2-icaos-buttons-closeup.png | /ops/airports/country-notes | v2 — přiblížení ICAOS řádku: SVG X ikony a + Add tlačítko jasně viditelné | 2026-03-26 |
+| country-notes-v2-name-iso-labels.png | /ops/airports/country-notes | v2 — Name / ISO2 / ISO3 řádek: Name wide, ISO2/ISO3 úzké na stejném řádku | 2026-03-26 |
+| country-notes-v2-permit-fields.png | /ops/airports/country-notes | v2 — Permit & Compliance sekce: Days/Hours spinbuttony + Permit required dropdown + checkboxy | 2026-03-26 |
+| country-notes-v2-permit-compliance-detail.png | /ops/airports/country-notes | v2 — Permit & Compliance detail: pole Days/Hours/dropdown + checkboxy v řadě + Save mimo kartu | 2026-03-26 |
+| country-notes-v4-full-page.png | /ops/airports/country-notes | v4 inspekce — celá stránka (fullPage): General karta, Country Note (bez karty), Permit & Compliance, Save tlačítko | 2026-03-26 |
+| country-notes-v4-general-card.png | /ops/airports/country-notes | v4 — General karta: ICAOS pole + Name/ISO2/ISO3 s TextField komponentami | 2026-03-26 |
+| country-notes-v4-country-note-section.png | /ops/airports/country-notes | v4 — Country Note sekce: RichTextEditor bez Card obalu + Bootstrap Save button | 2026-03-26 |
+| country-notes-v4-permit-compliance-viewport.png | /ops/airports/country-notes | v4 — Permit & Compliance karta: TextField inputs, SelectField (Headless UI), CheckboxInput (Remixicon), projektový Save button | 2026-03-26 |
+| country-notes-v4-permit-compliance-clipped.png | /ops/airports/country-notes | v4 — Permit & Compliance detail clip: Days/Hours inputs + dropdown + checkboxy + Save button | 2026-03-26 |
+| country-notes-v4-permit-compliance-detail.png | /ops/airports/country-notes | v4 — Permit & Compliance element screenshot (oříznutý) | 2026-03-26 |
+| country-notes-v4-save-button.png | /ops/airports/country-notes | v4 — viewport se Save button — projektový modrý Button vlevo dole | 2026-03-26 |
 
 ## Checklist Tester
 | File | Page | Description | Date |
@@ -106,6 +131,62 @@ Persistentní screenshoty UI aplikace eFlight. Používají se pro vizuální re
 | checklist-tester-reset-all.png | /ops/checklist-tester | Po "Reset all" — vše vráceno na původní reálné hodnoty, žádná zvýraznění | 2026-03-19 |
 | checklist-tester-wx-detail-open.png | /ops/checklist-tester | WX tab v LKPR Departure otevřen — TAF data, RVR/MDH, červený error "FPL Not Assigned", Confirm disabled | 2026-03-19 |
 
+## Scheduling — Roster Status Backgrounds
+| File | Page | Description | Date |
+|------|------|-------------|------|
+| scheduling-roster-status-backgrounds.png | /ops/ | Scheduling kalendář 3D view — roster-roff "Requested OFF" viditelné na Martin Struška řádku (pondělí 23.3.) | 2026-03-23 |
+| scheduling-roster-status-scrolled.png | /ops/ | Scheduling kalendář 3D view — scrollnutý pohled, Martin Struška: "Requested OFF" šedé pozadí | 2026-03-23 |
+| scheduling-roster-status-3d-fresh.png | /ops/ | Scheduling 3D view (23-25 Mar) — čerstvý screenshot, roster-roff na Martin Struška (Mon 23 Mar celý den) | 2026-03-23 |
+| scheduling-calendar-pilot-rows.png | /ops/ | 3D view — Ladislav Capoušek a Lukáš Kučera mají "Requested OFF" — fullPage screenshot | 2026-03-23 |
+| scheduling-requested-off-label-detail.png | /ops/ | Detail "Requested OFF" labelu — text ve spodní části řádku, font 9px | 2026-03-23 |
+| scheduling-requested-off-row-wide.png | /ops/ | Celý řádek Lukáše Kučery s "Requested OFF" — text dole v řádku | 2026-03-23 |
+| scheduling-week-view-marek-babic-roff-wide.png | /ops/ | Week view — Marek Babic s ROFF na Sat 11 April + Sun 12 April, oba bloky viditelné na 1920px viewportu | 2026-04-08 |
+
+## Bug verification — Roster backgrounds po prev klicích
+| File | Page | Description | Date |
+|------|------|-------------|------|
+| scheduling-roster-step1-initial.png | /ops/ | Výchozí stav (Mon 23 – Wed 25 Mar) — 3x "Requested OFF" v DOM, 2 viditelné (Ladislav Capoušek) | 2026-03-23 |
+| scheduling-roster-step2-prev1.png | /ops/ | Po 1. prev kliknutí (Sun 22 – Tue 24 Mar) — 2x "Requested OFF" v DOM, 1 viditelný | 2026-03-23 |
+| scheduling-roster-step3-prev2.png | /ops/ | Po 2. prev kliknutí (Sat 21 – Mon 23 Mar) — 1x "Requested OFF" v DOM, 0 viditelných (mimo viewport vpravo) | 2026-03-23 |
+| scheduling-roster-step4-prev3.png | /ops/ | Po 3. prev kliknutí (Fri 20 – Sun 22 Mar) — 0x "Requested OFF" v DOM (blok celý mimo zobrazený rozsah) | 2026-03-23 |
+
+## Scheduling — Roster #2535 (crew overlay, OFF, STANDBY)
+| File | Page | Description | Date |
+|------|------|-------------|------|
+| scheduling-2535-overview-1920.png | /ops/ | Scheduling kalendář — přehled 15-17 Apr 2026, 1920px viewport, OK-AML + piloti viditelní | 2026-04-15 |
+| scheduling-2535-fisher-okAML-16apr-1920.png | /ops/ | Detail Thu 16 April — OK-AML řádek (crew overlay "PIC: Struška / FO: Fišer" + šedý LIME blok) + Adam Fišer řádek ("Standby FO OK-AML" label + LIME blok) | 2026-04-15 |
+
 ## Other
 | File | Page | Description | Date |
 |------|------|-------------|------|
+
+## #2640 PR5 — 24h gate + blink animace
+| File | Page | Description | Date |
+|------|------|-------------|------|
+| 2640-pr5-baseline.png | /ops | Baseline week view (4-10 May), OK-AML filter, po hard refresh | 2026-05-04 |
+| 2640-pr5-test2-gate-hover-popup.png | /ops | Test 2: Let >24h (LTFE→LIMC, 182h) + FPL simulace → popup BEZ ETD, bar BEZ delayed třídy | 2026-05-04 |
+| 2640-pr5-test3-near24h-delayed-hover.png | /ops | Test 3: Let <24h (LIPZ→LIPB, 18h) + FPL+30min → popup s ETD 1650Z, bar s delayed třídou | 2026-05-04 |
+| 2640-pr5-test4-inflight-hover.png | /ops | Test 4: actualDeparture simulace na >24h let, hover popup — scheduled časy, žádné Departed | 2026-05-04 |
+| 2640-pr5-test5-blink-css-verified.png | /ops | Test 5: CSS blink animace ověřena (manuální třída arrival-blink přidána) | 2026-05-04 |
+
+## #2640 PR2 — Live flight updates regression test
+| File | Page | Description | Date |
+|------|------|-------------|------|
+| 2640-pr2-baseline-scheduling.png | /ops | Baseline 3D view po hard refresh — delayed bary viditelné se žlutým dashed border, ✈ na InFlight baru | 2026-05-04 |
+| 2640-pr2-inflight-badge-overview.png | /ops | InFlight bar EGLC→LGAV — ✈ badge viditelný (out-of-bar top-left) | 2026-05-04 |
+| 2640-pr2-week-view-after-simulate.png | /ops | Week view po simulaci FPL +30min — delayed bary napříč týdnem | 2026-05-04 |
+| 2640-pr2-month-view.png | /ops | Month view — delayed bary s žlutým dashed border | 2026-05-04 |
+| 2640-pr2-flightboard-regression.png | /ops/flightboard | Flightboard — status badgy In Flight/Landed/Planned beze změny | 2026-05-04 |
+| 2640-pr2-flightboard-regression-full.png | /ops/flightboard | Flightboard full page — všechny lety OK, žádná regrese | 2026-05-04 |
+| 2640-pr2-3d-view-with-delayed-bars.png | /ops | 3D view — delayed bary s žlutým dashed top border (InFlight ✈ + Planned P) | 2026-05-04 |
+
+## #2640 PR3 — Effective times v hover popupu
+| File | Page | Description | Date |
+|------|------|-------------|------|
+| 2640-pr3-baseline.png | /ops | Baseline Week view po hard refresh OK-AML filter | 2026-05-04 |
+| 2640-pr3-week-view.png | /ops | Week view přepnutý pro testování | 2026-05-04 |
+| 2640-pr3-test1-fpl-only-hover.png | /ops | Test 1: Planned+FPL — popup LIPZ→LIPB s ETD 1650Z vlevo a ETA 1715Z vpravo (zeleně) | 2026-05-04 |
+| 2640-pr3-test2-fpl-ctot-hover.png | /ops | Test 2: FPL+CTOT — popup s ETD 1650Z vlevo, ETA 1730Z vpravo, centrálně ETD 1650Z + CTOT 1705Z | 2026-05-04 |
+| 2640-pr3-test3-inflight-hover.png | /ops | Test 3: Inflight — popup s Departed 2037Z vlevo, ETA 2102Z vpravo (zeleně) | 2026-05-04 |
+| 2640-pr3-test4-landed-hover.png | /ops | Test 4: Landed — popup s Departed 2037Z vlevo, Landed 2137Z vpravo (zeleně) | 2026-05-04 |
+| 2640-pr3-test5-schedulled-hover.png | /ops | Test 5: Schedulled bez effLine — popup LFMN→LTFE bez žádných zelených řádků | 2026-05-04 |

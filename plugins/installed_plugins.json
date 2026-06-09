@@ -13,31 +13,41 @@
       },
       {
         "scope": "user",
-        "installPath": "/Users/jiri/.claude/plugins/cache/claude-plugins-official/code-review/d53f6ca4cdb0",
-        "version": "d53f6ca4cdb0",
+        "installPath": "/Users/jiri/.claude/plugins/cache/claude-plugins-official/code-review/5e7f8fbc73aa",
+        "version": "5e7f8fbc73aa",
         "installedAt": "2026-03-17T15:55:52.601Z",
-        "lastUpdated": "2026-03-19T06:26:54.884Z",
+        "lastUpdated": "2026-03-25T18:04:07.284Z",
         "gitCommitSha": "78497c524da3762865d47377357c30af5b50d522"
       }
     ],
     "playwright@claude-plugins-official": [
       {
         "scope": "user",
-        "installPath": "/Users/jiri/.claude/plugins/cache/claude-plugins-official/playwright/d53f6ca4cdb0",
-        "version": "d53f6ca4cdb0",
+        "installPath": "/Users/jiri/.claude/plugins/cache/claude-plugins-official/playwright/5e7f8fbc73aa",
+        "version": "5e7f8fbc73aa",
         "installedAt": "2026-03-01T17:50:06.624Z",
-        "lastUpdated": "2026-03-19T06:26:54.879Z",
+        "lastUpdated": "2026-03-25T18:04:07.284Z",
         "gitCommitSha": "55b58ec6e5649104f926ba7558b567dc8d33c5ff"
       }
     ],
     "frontend-design@claude-plugins-official": [
       {
         "scope": "user",
-        "installPath": "/Users/jiri/.claude/plugins/cache/claude-plugins-official/frontend-design/d53f6ca4cdb0",
-        "version": "d53f6ca4cdb0",
+        "installPath": "/Users/jiri/.claude/plugins/cache/claude-plugins-official/frontend-design/5e7f8fbc73aa",
+        "version": "5e7f8fbc73aa",
         "installedAt": "2026-03-18T07:54:55.633Z",
-        "lastUpdated": "2026-03-19T06:26:54.883Z",
+        "lastUpdated": "2026-03-25T18:04:07.284Z",
         "gitCommitSha": "6b70f99f769f58b9b642dc8a271936b17862cf8c"
+      }
+    ],
+    "figma@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/Users/jiri/.claude/plugins/cache/claude-plugins-official/figma/2.2.12",
+        "version": "2.2.12",
+        "installedAt": "2026-04-09T16:41:27.830Z",
+        "lastUpdated": "2026-05-19T12:08:04.746Z",
+        "gitCommitSha": "131e141b1f91fa4b4b6bc4b453fee1574d9f6e57"
       }
     ]
   }
