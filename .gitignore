@@ -33,3 +33,17 @@
 !projects/*/memory/
 !projects/*/memory/**
 !projects/*/memory/**/*.md
+
+# Custom skills (symlinky na externí skills se uloží jen jako odkazy)
+!skills/
+!skills/**
+
+# Paměť custom agentů
+!agent-memory/
+!agent-memory/**
+
+# Globální MCP servery
+!.mcp.json
+
+# Statusline skript
+!statusline-command.sh
