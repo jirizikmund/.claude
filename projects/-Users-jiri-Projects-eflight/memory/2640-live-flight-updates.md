@@ -148,12 +148,12 @@ Aktuální flight time v popupu (`HH:mm`) se počítá z `childEvent.dateTo - ch
 - **Šrafa po přistání zmizí** bezpodmínečně, i kdyby TLB actuals byly hodně mimo scheduled.
 - **Po odletu** v popupu vlevo jen `Departed` zeleně; FPL/CTOT řádky zmizí. Vpravo `ETA` (pre-landing) / `Landed` (post-landing) zachovány.
 - **Barvy/blikání všech stavů badge** = výhradně Flightboard (`getFlightStatusVariant` + `getFlightStatusShouldBlink`).
-- **TLB po přistání** jen dokud žije flightboard záznam (~2 h post-landing); fallback dotaz na Leg tabulku (`listLegsByReservationId`) = pozdější task, **neimplementováno**.
+- **TLB po přistání** — VYŘEŠENO (větev `feature/flightdata`, commit `c844c5ebc`, 29. 5. 2026). Lukáš Vlček přidal na rezervaci field `flightData: { flights: { departure, arrival, childEventId }[] }` (commit `985911cee`), který nese reálné eTLB časy kdykoliv zpětně (ne jen ~2 h). Integrováno jako **nejvyšší priorita actuals** v `deriveEffectiveTimes` (nový 5. param `flightDataTimes` před `now`): `flightData > flightboard actual > CTOT > FPL > scheduled`. Helper `ChildEventUtils.getFlightData({ childEvent, reservation })` mapuje na leg přes `childEventId`. Předáno do všech 6 call sites. POZOR: `flightData` se parsuje bez `dateTimeReviver` → časy jsou ISO stringy (řeší `toDate`). Původně plánovaný fallback přes `listLegsByReservationId` se NEdělal.
 
 ## Otevřené / k ověření
 
 - **Drobná nekonzistence v ETA color:** `colorForShift` v popupu používá asymetrický práh dvojstranně (early > 15 OR late >= 30) pro všechny řádky včetně ETA. `isArrShifted` v `effectiveTimes` je ale jen jednostranný (late >= 30). Důsledek: ETA `−20 min` (early arrival) → žlutá v popupu, ale šrafa NE. V praxi early arrival vzácný; nemusí být problém.
 - `EffectiveTimes.flightTimeMs` ve typu je nyní vždy scheduled duration. Žádný externí consumer (jen self). Lze odstranit z typu, nebo ponechat jako defensive.
 - Vizuální tuning `width_50` `.leg-status-text` right-anchor a blink-grid sizing (`right:34px`).
-- TLB fallback přes `listLegsByReservationId` (samostatný task).
 - Koordinace s @veproza ohledně konzumentů normy mimo scheduling kalendář.
+- Historický leg s `flightData` → `phase='landed'` (časy zeleně), ale status badge se nezobrazí (`flightStatus` z archivovaného flightboardu je `undefined`) — očekávané, ne bug.

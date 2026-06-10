@@ -74,7 +74,7 @@
   "skipDangerousModePermissionPrompt": true,
   "preferredNotifChannel": "terminal_bell",
   "agentPushNotifEnabled": true,
-  "voiceEnabled": true,
   "skipAutoPermissionPrompt": true,
-  "effortLevel": "xhigh"
+  "voiceEnabled": true,
+  "model": "claude-fable-5[1m]"
 }

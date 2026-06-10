@@ -9,6 +9,10 @@
 
 - Komunikace probíhá česky
 
+## Package manager
+
+- [eFlight používá npm](package-manager-npm.md) — `package-lock.json`, ne pnpm
+
 ## Feedback
 
 - [Prettier formatting](feedback_prettier.md) — vždy respektovat prettier konfiguraci při úpravách kódu
@@ -20,7 +24,7 @@
 
 ## Agenti (při startu VŽDY načíst z ~/.claude/agents/)
 
-- **eflight-visual-inspector** — vizuální inspekce eFlight webu přes Playwright MCP. Ukládá screenshoty do `memory/screenshots/` s indexem. Používat pro kontrolu UI po změnách i pro procházení aktuálního stavu aplikace.
+- **eflight-visual-inspector** — vizuální inspekce eFlight webu přes Playwright MCP. Ukládá screenshoty do `memory/screenshots/` s indexem. Používat pro kontrolu UI po změnách i pro procházení aktuálního stavu aplikace. POZOR: občas screenshoty uloží do rootu repa (`/Users/jiri/Projects/eflight/*.png`) místo do memory/screenshots → po inspekci zkontrolovat a přesunout, ať nezaneřádí git. Inspekce běží proti dev serveru na localhost:3000.
 - **mobile-inspector** — inspekce mobilní aplikace přes Appium MCP (screenshot, elementy, navigace, interakce). Používat pro kontrolu mobilního UI.
 
 ## Struktura aplikace
@@ -28,6 +32,7 @@
 - [Popis stránek a UI](app-pages.md)
 - [Reservation form — architektura, crew, datový model](reservation-form-knowledge.md)
 - [Checklist rezervace — znalosti](checklist-knowledge.md)
+- [Výpočet normy (duty/FDP) posádky](duty-calculation-knowledge.md) — datové zdroje, computeDuties/autocreateDuties, EmptyLegToRemove, getCalendar
 
 ## Aktivní plány
 
@@ -39,3 +44,5 @@
 - [Country Notes vizuální redesign (#2612)](2612-country-notes-visual-redesign.md)
 - [Roster status v kalendáři (#2535)](2535-roster-calendar-display.md) — crew overlay, OFF, STANDBY, NO SCHEDULED CREW
 - [Live flight updates v schedulingu (#2640)](2640-live-flight-updates.md) — FPL/CTOT/ETD/ETA v popupu, posun baru, duty calc
+- [FPL možnost odpárování (#2698)](2698-fpl-unpair.md) — hotovo (commit f13d8d36c); unpair tlačítko, auto-unpair hook, autopair rules modal
+- [Duty chyby posádky na rezervační timeline (#2402)](2402-duty-reservation-timeline.md) — HOTOVO, vizuálně ověřeno (commit e6638e81a, feat/2402, nepushnuto, force-push na uživateli); hook useReservationDutyErrors (rozvrh posádky napříč letadly) + opt-out DutyPostprocessor

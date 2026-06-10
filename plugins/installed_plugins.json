@@ -43,10 +43,10 @@
     "figma@claude-plugins-official": [
       {
         "scope": "user",
-        "installPath": "/Users/jiri/.claude/plugins/cache/claude-plugins-official/figma/2.2.12",
-        "version": "2.2.12",
+        "installPath": "/Users/jiri/.claude/plugins/cache/claude-plugins-official/figma/2.2.49",
+        "version": "2.2.49",
         "installedAt": "2026-04-09T16:41:27.830Z",
-        "lastUpdated": "2026-05-19T12:08:04.746Z",
+        "lastUpdated": "2026-06-10T05:49:05.194Z",
         "gitCommitSha": "131e141b1f91fa4b4b6bc4b453fee1574d9f6e57"
       }
     ]
