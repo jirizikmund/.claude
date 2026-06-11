@@ -47,3 +47,6 @@
 
 # Statusline skript
 !statusline-command.sh
+
+# macOS balast (i v povolených adresářích)
+**/.DS_Store

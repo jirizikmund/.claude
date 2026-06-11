@@ -13,40 +13,40 @@
       },
       {
         "scope": "user",
-        "installPath": "/Users/jiri/.claude/plugins/cache/claude-plugins-official/code-review/5e7f8fbc73aa",
-        "version": "5e7f8fbc73aa",
+        "installPath": "/Users/jiri/.claude/plugins/cache/claude-plugins-official/code-review/29ad8034cc1c",
+        "version": "29ad8034cc1c",
         "installedAt": "2026-03-17T15:55:52.601Z",
-        "lastUpdated": "2026-03-25T18:04:07.284Z",
-        "gitCommitSha": "78497c524da3762865d47377357c30af5b50d522"
+        "lastUpdated": "2026-06-11T07:58:03.546Z",
+        "gitCommitSha": "29ad8034cc1c764c46e055479b9632a29cab74e6"
       }
     ],
     "playwright@claude-plugins-official": [
       {
         "scope": "user",
-        "installPath": "/Users/jiri/.claude/plugins/cache/claude-plugins-official/playwright/5e7f8fbc73aa",
-        "version": "5e7f8fbc73aa",
+        "installPath": "/Users/jiri/.claude/plugins/cache/claude-plugins-official/playwright/29ad8034cc1c",
+        "version": "29ad8034cc1c",
         "installedAt": "2026-03-01T17:50:06.624Z",
-        "lastUpdated": "2026-03-25T18:04:07.284Z",
-        "gitCommitSha": "55b58ec6e5649104f926ba7558b567dc8d33c5ff"
+        "lastUpdated": "2026-06-11T07:58:03.547Z",
+        "gitCommitSha": "29ad8034cc1c764c46e055479b9632a29cab74e6"
       }
     ],
     "frontend-design@claude-plugins-official": [
       {
         "scope": "user",
-        "installPath": "/Users/jiri/.claude/plugins/cache/claude-plugins-official/frontend-design/5e7f8fbc73aa",
-        "version": "5e7f8fbc73aa",
+        "installPath": "/Users/jiri/.claude/plugins/cache/claude-plugins-official/frontend-design/29ad8034cc1c",
+        "version": "29ad8034cc1c",
         "installedAt": "2026-03-18T07:54:55.633Z",
-        "lastUpdated": "2026-03-25T18:04:07.284Z",
-        "gitCommitSha": "6b70f99f769f58b9b642dc8a271936b17862cf8c"
+        "lastUpdated": "2026-06-11T07:58:03.545Z",
+        "gitCommitSha": "29ad8034cc1c764c46e055479b9632a29cab74e6"
       }
     ],
     "figma@claude-plugins-official": [
       {
         "scope": "user",
-        "installPath": "/Users/jiri/.claude/plugins/cache/claude-plugins-official/figma/2.2.49",
-        "version": "2.2.49",
+        "installPath": "/Users/jiri/.claude/plugins/cache/claude-plugins-official/figma/2.2.50",
+        "version": "2.2.50",
         "installedAt": "2026-04-09T16:41:27.830Z",
-        "lastUpdated": "2026-06-10T05:49:05.194Z",
+        "lastUpdated": "2026-06-11T07:42:59.829Z",
         "gitCommitSha": "131e141b1f91fa4b4b6bc4b453fee1574d9f6e57"
       }
     ]
