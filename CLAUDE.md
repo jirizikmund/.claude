@@ -30,3 +30,9 @@
 - Bump verze provést ve vlastním commitu
 - Commit message ve formátu `v1.2.0` (jen verze, nic jiného)
 - Zároveň aplikovat git tag s číslem buildu za poslední tečkou (např. `git tag v1.2.0.123`)
+
+## Projektová dokumentace
+
+Sdíleno s agentským strojem přes import (single-source v `agent-dotclaude/rules/`):
+
+@~/Projects/@d4works/agent-dotclaude/rules/documentation.md
