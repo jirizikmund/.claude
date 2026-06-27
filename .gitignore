@@ -33,6 +33,8 @@
 !projects/*/memory/
 !projects/*/memory/**
 !projects/*/memory/**/*.md
+# Screenshoty z memory NEverzovat (binární balast — zůstávají jen na disku)
+projects/*/memory/screenshots/
 
 # Custom skills (symlinky na externí skills se uloží jen jako odkazy)
 !skills/
