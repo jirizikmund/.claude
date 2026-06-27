@@ -9,10 +9,10 @@ metadata:
 
 # #2402 — Duty chyby posádky na rezervační časové ose
 
-**Stav: HOTOVO, vizuálně ověřeno. Squash commit `e6638e81a` na `feat/2402`** (6 souborů, +397/−22;
-1.+2. kolo + robustness fixy sloučeno/amendnuto 9.6.2026 — pozn. hash se rebasem/amendem mění).
-**Nepushnuto** — sync na origin/feat/2402 bude potřebovat force-push (na uživateli). Klient
-(Alpha Aviation / Marcel) zadání potvrdil.
+**Stav: HOTOVO a MERGNUTO do masteru** jako `9301e6544` (PR #2738, merged 9.6.2026; lokální
+squash byl `e6638e81a` — patch-ekvivalentní, ověřeno `git cherry`). Klient (Alpha Aviation /
+Marcel) zadání potvrdil. **Follow-up 11.6.2026** (empty legs highlight fix + reservation code
+badge v popupu, větev feat/2402 přepsána na nové commity): viz [[2402-empty-legs-timeline-fix]].
 
 **CR (blast-radius) + vizuální test 9.6.2026:** push je bezpečný — změna je aditivní, nová logika
 v `useTimelineData` je za opt-in flagem `disableDutyPostprocessor` (jen quote osa), kalendář má

@@ -5,6 +5,9 @@
 - Package manager: yarn (legacy projekt, nové projekty by měly být pnpm)
 - Android package: `com.poqstudio.app.platform.zoot`
 - Flavors: zoot, bibloo
+- Provozovatel: DaniDarx, s.r.o. (dříve Digital People, a.s., IČO 24209139) — rebrand v release 21.17.0
+- Zoot appka existuje jen v CZ a SK — překladové stringy mimo cs/sk neřešit (potvrzeno uživatelem)
+- [Rebrand DaniDarx — otevřené body](rebrand-danidarx-open-items.md) — zbývá úklid mrtvého kódu po phone verification
 
 ## Klíčové soubory
 - `src/utils/firebase.ts` — FCM setup, notifikace (foreground/background), remote config

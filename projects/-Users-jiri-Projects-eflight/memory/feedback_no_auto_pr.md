@@ -11,3 +11,5 @@ Nikdy sám od sebe nepushovat na remote — **ani na master, ani na feature vět
 **Why:** Uživatel mě napomenul 2× — poprvé po vytvoření hotfix PR #2683 bez souhlasu, podruhé po pushi follow-up fixu (`3873bc988`) přímo na master pod záminkou „pokračuj" (2026-05-13). Push má blast radius mimo můj stroj (team, CI, deploy), proto vyžaduje konfirmaci pokaždé.
 
 **How to apply:** Po dokončení změn lokální commit OK. **Před každým `git push`** (jakákoliv větev) se zeptat. Před `gh pr create` se zeptat. Když uživatel řekne neurčité „pokračuj" po committech, znamená to „pokračuj v práci", ne „pushni a hotovo" — pokud chce push, řekne to explicitně.
+
+**Force-push:** je vyhrazený uživateli VŽDY — i když explicitně zadal workflow „vytvoř větev a PR" (11.6.2026: classifier mi `git push -f origin feat/2402` zablokoval). Řešení: připravit větev lokálně a nabídnout uživateli příkaz `! git push -f origin <větev>`, pak pokračovat (PR).

@@ -31,6 +31,8 @@ Kalendář (`DutyPostprocessor`) i hook #2402 kombinují:
 
 `ChildEventUtils.isCancelled({childEvent,reservation})` = `slsCancelled || opsCancelled || reservation.cancelledLegs.find(eventId===childEvent.id)`. Cancelled leg přes `deriveEffectiveTimes` stále vrací leg-like se scheduled časy (phase 'cancelled') — do duty se počítá, pokud ho explicitně nevyfiltruješ.
 
+**Tři stavy legu vs zobrazení na timeline (ověřeno 12.6.2026):** `deleted: true` se NEZOBRAZUJE NIKDY — odfiltrován už při loadu z DB (`reservationDataToReservation` → `convertChildEvents` → `filter(isNotDeleted)`, totéž resources), proto timeline/duty kód žádný deleted filtr nemá a spoléhá na čistá data. Cancelled SE zobrazuje (červený, přeškrtnuté ICAO, „CANCELLED" v popupu), do normy se nepočítá. `EmptyLegToRemove` = normální (zatím nezrušený) leg cizí rezervace — zobrazuje se, červené zvýraznění od fixu `3ae543566`. Backend `/reservation/emptyLegsToRemove` deleted legy nenabízí (`isNotDeleted` + jen budoucí legy).
+
 ## getCalendar (`Datasources/getCalendar.ts`)
 `getCalendar({dateFrom,dateTo,filter,isQuotation,loadContacts,loadAircrafts})` → `{result: CalendarLine[], maintenancePromise}`. `CalendarLine = {resource, reservations: Reservation[]}`. `filter.linesResourceIds` → `showResourceLine` gate (jen vyjmenované linky). Reservace se přiřadí na linku podle **všech** resources (reservation-level + childEvent non-aircraft). `loadContacts/loadAircrafts` gateují **jen** `maintenancePromise` (linky vznikají i on-demand z rezervací). `isQuotation:false` = potvrzené rezervace, ne quoty. → lze donačíst rozvrh konkrétních pilotů: `filter:{linesResourceIds:[pilotIds]}, isQuotation:false`.
 

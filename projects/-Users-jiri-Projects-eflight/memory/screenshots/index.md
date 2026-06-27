@@ -156,6 +156,28 @@ Persistentní screenshoty UI aplikace eFlight. Používají se pro vizuální re
 | scheduling-2535-overview-1920.png | /ops/ | Scheduling kalendář — přehled 15-17 Apr 2026, 1920px viewport, OK-AML + piloti viditelní | 2026-04-15 |
 | scheduling-2535-fisher-okAML-16apr-1920.png | /ops/ | Detail Thu 16 April — OK-AML řádek (crew overlay "PIC: Struška / FO: Fišer" + šedý LIME blok) + Adam Fišer řádek ("Standby FO OK-AML" label + LIME blok) | 2026-04-15 |
 
+## Overview (#2778 — ChildEventFlag oříznutí)
+| File | Page | Description | Date |
+|------|------|-------------|------|
+| 2778-before-overview-full.png | /ops/ (Overview tab) | PŘED: celá stránka Overview — tabulka letů, 1920px viewport | 2026-06-18 |
+| 2778-before-legs-column-detail.png | /ops/ (Overview tab) | PŘED: detail tabulky — rowgroup screenshot; zelené ✓ viditelné u OK-VAN, červené ! chybí u OK-VNI | 2026-06-18 |
+| 2778-before-danger-badge-clipped.png | /ops/ (Overview tab) | PŘED: řádek OK-VNI (Air Charter Service) — LSGG→LFMQ a LFTZ→LSGG bez barevného indikátoru (! oříznut) | 2026-06-18 |
+| 2778-after-overview-full.png | /ops/?view=overview | PO v1: celá stránka Overview po opravě — sloupec 360px, všechny badge viditelné | 2026-06-18 |
+| 2778-after-legs-column-okvni.png | /ops/?view=overview | PO v1: OK-VNI buňka (Air Charter Service) — 2x červený ! badge PLNĚ viditelný (LSGG→LFMQ, LFTZ→LSGG) | 2026-06-18 |
+| 2778-after-legs-column-okdlm.png | /ops/?view=overview | PO v1: OK-DLM buňka (Benefit Air) — 2x zelený ✓ + 2x červený ! badge viditelné (4 legy) | 2026-06-18 |
+| 2778-after-legs-column-okamr.png | /ops/?view=overview | PO v1: OK-AMR buňka (Global Charter) — 1x zelený ✓ + 3x žlutý ! badge viditelné (4 legy) | 2026-06-18 |
+| 2778-v2-overview-full.png (v eflight root) | /ops/?view=overview | PO v2 (300px+LocationTag zúžení): celá stránka 1920px fullPage | 2026-06-18 |
+| 2778-v2-legs-column-full.png (v eflight root) | /ops/?view=overview | PO v2: rowgroup screenshot stránky 1 — všechny badge ✓/! viditelné, sloupec 300px | 2026-06-18 |
+| 2778-v2-legs-cell-okvni.png (v eflight root) | /ops/?view=overview | PO v2: totožný s legs-column-full — rowgroup s OK-VNI červenými ! | 2026-06-18 |
+| 2778-v2-page2-rowgroup.png (v eflight root) | /ops/?view=overview | PO v2: stránka 2 rowgroup — charter/wet-lease lety, badge viditelné | 2026-06-18 |
+| 2778-v2-page3-rowgroup.png (v eflight root) | /ops/?view=overview | PO v2: stránka 3 rowgroup — 5+ legový let OK-JKP, červené/zelené badge OK | 2026-06-18 |
+| 2778-v3-overview-full.png (v eflight root) | /ops/?view=overview | PO v3 (width=115, monospace): celá stránka 1280px viewport | 2026-06-18 |
+| 2778-v3-overview-1920-full.png (v eflight root) | /ops/?view=overview | PO v3: celá stránka 1920px fullPage — všechny badge viditelné | 2026-06-18 |
+| 2778-v3-rowgroup-detail.png (v eflight root) | /ops/?view=overview | PO v3: rowgroup element screenshot — všechny řádky letů s badge | 2026-06-18 |
+| 2778-v3-okvni-cell-detail.png (v eflight root) | /ops/?view=overview | PO v3: OK-VNI buňka — 2x červený ! (bg-danger) badge PLNĚ viditelný, monospace LSGG/LFMQ/LFTZ | 2026-06-18 |
+| 2778-v3-okdlm-cell-detail.png (v eflight root) | /ops/?view=overview | PO v3: OK-DLM buňka (Benefit Air) — 2x zelený ✓ + 2x červený ! badge, 4 legy | 2026-06-18 |
+| 2778-v3-okamr-cell-detail.png (v eflight root) | /ops/?view=overview | PO v3: OK-AMR buňka (Global Charter) — 1x zelený ✓ + 3x žlutý ! (bg-warning) badge, 4 legy | 2026-06-18 |
+
 ## Other
 | File | Page | Description | Date |
 |------|------|-------------|------|

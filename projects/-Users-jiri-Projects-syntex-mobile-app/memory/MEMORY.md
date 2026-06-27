@@ -1,2 +1,5 @@
 - [No third-party advertising in Syntex](project_no_advertising.md) — verified against deps; Age Rating Advertising=No is correct; Apple scanner false-positived on 2026-04-14, reply + App Review Notes prepared.
 - [Never push without asking](feedback_never_push.md) — commit locally when asked, but never `git push`; the user pushes.
+- [Keep docs/ in sync](feedback_keep_docs_updated.md) — read docs/README.md at session start; update the relevant docs/ file when working on a feature; commit doc changes in a separate commit.
+- [Product search task](project_product_search.md) — DONE 2026-06-19: Products-tab search input now filters the category tree inline (local, variant A). Detail in docs/features/products.md.
+- [Product share + universal links](project_product_share.md) — IN PROGRESS (zadáno 2026-06-19): share tlačítko na detailu + universal links; průzkum hotový, čeká na 2 rozhodnutí (URL formát/itemid, UL hosting). Implementace zatím nezapočata.

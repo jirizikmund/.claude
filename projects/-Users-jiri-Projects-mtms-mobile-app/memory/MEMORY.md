@@ -5,3 +5,5 @@
 - [Ikony — barvy podle role v UI](feedback_icon_color_patterns.md) — `Colors.icon` není univerzál; panel avatar = `text.support`, ListItem leftIcon = `text.primary`, chevron = `text.support`
 - [@expo/ui SwiftMenu hit area](feedback_expo_ui_menu_hitarea.md) — string `label` má hit area jen na textu; pro rozšíření předej custom JSX label s frame+contentShape
 - [@expo/ui DropdownMenu na Androidu](feedback_expo_ui_dropdown_menu_android.md) — wrap v `Host matchContents` + `size(W,H)` modifier; v slotech Compose `Text`, ne RN Text
+- [ClickUp MCP — vlastní, ne oficiální](feedback_clickup_mcp_custom.md) — chybějící funkce řešit rozšířením vlastního `mcp__clickup__*`, nenabízet oficiální mcp.clickup.com
+- [MCP local-scope + DOTENV_CONFIG_PATH](project_mcp_local_scope_dotenv.md) — clickup/clockify v local scope čtou .claude/.env.local; žádný committed .mcp.json; re-registrace přes `claude mcp add`

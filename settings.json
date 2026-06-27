@@ -17,7 +17,6 @@
     ],
     "defaultMode": "auto"
   },
-  "model": "claude-fable-5[1m]",
   "hooks": {
     "PreToolUse": [
       {
@@ -72,10 +71,13 @@
     "figma@claude-plugins-official": true
   },
   "language": "czech",
+  "effortLevel": "xhigh",
+  "ultracode": true,
   "skipDangerousModePermissionPrompt": true,
   "preferredNotifChannel": "terminal_bell",
+  "remoteControlAtStartup": true,
   "agentPushNotifEnabled": true,
   "skipAutoPermissionPrompt": true,
   "voiceEnabled": true,
-  "effortLevel": "high"
+  "tui": "fullscreen"
 }
